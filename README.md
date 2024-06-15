@@ -1,6 +1,4 @@
-Certainly! Here is a comprehensive documentation for the script that demonstrates how to test a trained YOLOv8 model on a single image, including the functionality to resize the image before making predictions:
-
-## YOLOv8 Model Inference Script
+## YOLOv8 Vehicle Detection Model 
 
 ### Overview
 This script demonstrates how to use a trained YOLOv8 model to perform object detection on a single image. The script includes functionality to resize the image while maintaining its aspect ratio to ensure the entire image fits within the display window.
@@ -14,7 +12,7 @@ This script demonstrates how to use a trained YOLOv8 model to perform object det
 ### Installation
 Ensure you have the required libraries installed. You can install them using pip:
 ```bash
-pip install ultralytics opencv-python
+pip install -r requirements.txt
 ```
 
 ### Script Details
@@ -50,13 +48,13 @@ def resize_image(image, max_width=None, max_height=None):
 
 #### Load the YOLOv8 Model
 ```python
-model = YOLO(r'C:\PyProj\newyolo\runs\train\exp5\weights\best.pt')
+model = YOLO(r'runs\train\exp5\weights\best.pt') #change this as needed
 ```
 - Loads the trained YOLOv8 model from the specified path.
 
 #### Specify the Image Path
 ```python
-image_path = r'C:\Users\krish\Downloads\IMG_3148.png'
+image_path = r'path\to\your\image'
 ```
 - Specifies the path to the image on which you want to perform object detection.
 
@@ -101,5 +99,4 @@ cv2.destroyAllWindows()
 - Ensure the paths to the model weights and image are correct.
 - Adjust the `max_width` and `max_height` values as needed for your display or processing requirements.
 
-### Conclusion
-This script provides a straightforward way to test a trained YOLOv8 model on a single image, including resizing functionality to handle large images. You can further customize the script to suit your specific needs or integrate it into larger applications.
+
