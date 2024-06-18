@@ -19,7 +19,7 @@ def resize_image(image, max_width=None, max_height=None):
 model = YOLO(r'C:\PyProj\newyolo\runs\train\exp5\weights\best.pt')
 
 # Path to the image you want to test
-image_path = r'C:\Users\krish\Downloads\IMG_3148.png'
+image_path = r'C:\Users\krish\Downloads\tstest.png'
 
 # Load the image
 image = cv2.imread(image_path)
